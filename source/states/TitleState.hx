@@ -511,6 +511,7 @@ class TitleState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
+		
 
 		if(logoBl != null)
 			logoBl.animation.play('bump', true);
@@ -553,11 +554,11 @@ class TitleState extends MusicBeatState
 				case 13:
 					deleteCoolText();
 				case 14:
-					addMoreText('SNS');
+					addMoreText('Friendly');
 				case 15:
-					addMoreText('2.5');
+					addMoreText('Rhythm');
 				case 16:
-					addMoreText('Restyle'); // credTextShit.text += '\nFunkin';
+					addMoreText('Demo'); // credTextShit.text += '\nFunkin';
 
 				case 17:
 					skipIntro();
