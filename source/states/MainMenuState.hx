@@ -5,6 +5,7 @@ import flixel.effects.FlxFlicker;
 import lime.app.Application;
 import states.editors.MasterEditorMenu;
 import options.OptionsState;
+import backend.Song;
 
 enum MainMenuColumn {
 	LEFT;
@@ -288,8 +289,8 @@ class MainMenuState extends MusicBeatState
 						switch (option)
 						{
 							case 'story_mode':
-								Song.loadFromJson("crashed-hard", "crashed");
-MusicBeatState.switchState(new PlayState());
+								PlayState.SONG = Song.loadFromJson("crashed-hard", "crashed");
+LoadingState.loadAndSwitchState(new PlayState());
 							case 'freeplay':
 								MusicBeatState.switchState(new FreeplayState());
 
