@@ -533,20 +533,18 @@ class TitleState extends MusicBeatState
 					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
 				case 2:
-					createCoolText(['Psych Engine by'], 40);
+					createCoolText(['MindF'], 40);
 				case 4:
-					addMoreText('Shadow Mario', 40);
-					addMoreText('Riveren', 40);
+					addMoreText('Present', 40);
+					ngSpr.visible = true;
 				case 5:
 					deleteCoolText();
 				case 6:
-					createCoolText(['Mod Created By', 'with'], -40);
+					createCoolText(['Welcome', 'To'], -40);
 				case 8:
-					addMoreText('MindF', -40);
-					ngSpr.visible = false;
+					addMoreText('Friendly Rhythm', -40);
 				case 9:
 					deleteCoolText();
-					ngSpr.visible = false;
 				case 10:
 					createCoolText([curWacky[0]]);
 				case 12:
