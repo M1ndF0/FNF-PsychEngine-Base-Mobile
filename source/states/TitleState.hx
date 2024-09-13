@@ -531,7 +531,7 @@ class TitleState extends MusicBeatState
 				case 1:
 					//FlxG.sound.music.stop();
 					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
-					FlxG.sound.music.fadeIn(4, 0, 0.01);
+					FlxG.sound.music.fadeIn(0.001, 0, 0.7);
 				case 2:
 					createCoolText(['MindF'], -40);
 				case 4:
