@@ -289,7 +289,7 @@ class TitleState extends MusicBeatState
 
 		credTextShit.visible = false;
 
-		ngSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('newgrounds_logo'));
+		ngSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('mindf'));
 		add(ngSpr);
 		ngSpr.visible = false;
 		ngSpr.setGraphicSize(Std.int(ngSpr.width * 0.8));
@@ -531,7 +531,7 @@ class TitleState extends MusicBeatState
 				case 1:
 					//FlxG.sound.music.stop();
 					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
-					FlxG.sound.music.fadeIn(4, 0, 0.7);
+					FlxG.sound.music.fadeIn(4, 0, 0.01);
 				case 2:
 					createCoolText(['MindF'], -40);
 				case 4:
@@ -541,9 +541,9 @@ class TitleState extends MusicBeatState
 				ngSpr.visible = false;
 					deleteCoolText();
 				case 6:
-					createCoolText(['Welcome', 'To'], 40);
+					createCoolText(['Welcome', 'To'], 20);
 				case 8:
-					addMoreText('Friendly Rhythm', 40);
+					addMoreText('Friendly Rhythm', 20);
 				case 9:
 					deleteCoolText();
 				case 10:
