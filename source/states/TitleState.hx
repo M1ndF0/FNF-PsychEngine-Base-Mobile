@@ -298,7 +298,7 @@ class TitleState extends MusicBeatState
 		ngSpr.screenCenter(X);
 		ngSpr.antialiasing = ClientPrefs.data.antialiasing;
 		
-		teamSpr = new FlxSprite(0, FlxG.height * 0.65).loadGraphic(Paths.image('team'));
+		teamSpr = new FlxSprite(0, FlxG.height * 0.35).loadGraphic(Paths.image('team'));
 		add(teamSpr);
 		teamSpr.visible = false;
 		teamSpr.setGraphicSize(Std.int(teamSpr.width * 0.8));
@@ -550,7 +550,7 @@ class TitleState extends MusicBeatState
 				ngSpr.visible = false;
 					deleteCoolText();
 				case 6:
-					createCoolText(['Friendly Rhythm', 'Team'], -40);
+					createCoolText(['Friendly Rhythm', 'Team'], -55);
 				case 8:
 					teamSpr.visible = true;
 				case 9:
