@@ -44,6 +44,7 @@ class TitleState extends MusicBeatState
 	var credTextShit:Alphabet;
 	var textGroup:FlxGroup;
 	var ngSpr:FlxSprite;
+		var teamSpr:FlxSprite;
 	
 	var titleTextColors:Array<FlxColor> = [0xFF33FFFF, 0xFF3333CC];
 	var titleTextAlphas:Array<Float> = [1, .64];
@@ -296,6 +297,14 @@ class TitleState extends MusicBeatState
 		ngSpr.updateHitbox();
 		ngSpr.screenCenter(X);
 		ngSpr.antialiasing = ClientPrefs.data.antialiasing;
+		
+		teamSpr = new FlxSprite(0, FlxG.height * 0.65).loadGraphic(Paths.image('team'));
+		add(teamSpr);
+		teamSpr.visible = false;
+		teamSpr.setGraphicSize(Std.int(teamSpr.width * 0.8));
+		teamSpr.updateHitbox();
+		teamSpr.screenCenter(X);
+		teamSpr.antialiasing = ClientPrefs.data.antialiasing;
 
 		if (initialized)
 			skipIntro();
@@ -541,10 +550,11 @@ class TitleState extends MusicBeatState
 				ngSpr.visible = false;
 					deleteCoolText();
 				case 6:
-					createCoolText(['Welcome', 'To'], 20);
+					createCoolText(['Friendly Rhythm', 'Team'], -40);
 				case 8:
-					addMoreText('Friendly Rhythm', 20);
+					teamSpr.visible = true;
 				case 9:
+								teamSpr.visible = false;
 					deleteCoolText();
 				case 10:
 					createCoolText([curWacky[0]]);
@@ -590,6 +600,7 @@ class TitleState extends MusicBeatState
 
 					default: //Go back to normal ugly ass boring GF
 						remove(ngSpr);
+						remove(teamSpr);
 						remove(credGroup);
 						FlxG.camera.flash(FlxColor.WHITE, 2);
 						skippedIntro = true;
@@ -606,6 +617,7 @@ class TitleState extends MusicBeatState
 					new FlxTimer().start(3.2, function(tmr:FlxTimer)
 					{
 						remove(ngSpr);
+								remove(teamSpr);
 						remove(credGroup);
 						FlxG.camera.flash(FlxColor.WHITE, 0.6);
 						transitioning = false;
@@ -614,6 +626,7 @@ class TitleState extends MusicBeatState
 				else
 				{
 					remove(ngSpr);
+							remove(teamSpr);
 					remove(credGroup);
 					FlxG.camera.flash(FlxColor.WHITE, 3);
 					sound.onComplete = function() {
@@ -627,6 +640,7 @@ class TitleState extends MusicBeatState
 			else #end //Default! Edit this one!!
 			{
 				remove(ngSpr);
+						remove(teamSpr);
 				remove(credGroup);
 				FlxG.camera.flash(FlxColor.WHITE, 4);
 
