@@ -199,7 +199,6 @@ class Alphabet extends FlxSpriteGroup
 
             }
 
-        }
         
 
 	public function snapToPosition()
