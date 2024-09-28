@@ -176,22 +176,7 @@ class Alphabet extends FlxSpriteGroup
 			if(changeY)
 				y = FlxMath.lerp((targetY * 1.3 * distancePerItem.y) + startPosition.y, y, lerpVal);
 		}
-		super.update(elapsed);
-	}
-	
-
-	public function snapToPosition()
-	{
-		if (isMenuItem)
-		{
-			if(changeX)
-				x = (targetY * distancePerItem.x) + startPosition.x;
-			if(changeY)
-				y = (targetY * 1.3 * distancePerItem.y) + startPosition.y;
-		}
-	}
-	
-		if (isMenuItemCenter)
+				if (isMenuItemCenter)
 
         {
 
@@ -212,6 +197,23 @@ class Alphabet extends FlxSpriteGroup
             }
 
         }
+		super.update(elapsed);
+	}
+	
+	
+	
+
+	public function snapToPosition()
+	{
+		if (isMenuItem)
+		{
+			if(changeX)
+				x = (targetY * distancePerItem.x) + startPosition.x;
+			if(changeY)
+				y = (targetY * 1.3 * distancePerItem.y) + startPosition.y;
+		}
+	}
+	
 
 	private static var Y_PER_ROW:Float = 85;
 
