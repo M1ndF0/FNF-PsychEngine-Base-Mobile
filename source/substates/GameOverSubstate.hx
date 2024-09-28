@@ -29,6 +29,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		if(playStateBoyfriend != null && playStateBoyfriend.curCharacter == characterName) //Avoids spawning a second boyfriend cuz animate atlas is laggy
 		{
 			this.boyfriend = playStateBoyfriend;
+				FlxTween.tween(FlxG.camera, {zoom: 1.35}, 0.8, {ease: FlxEase.circOut});
 		}
 		super();
 	}
