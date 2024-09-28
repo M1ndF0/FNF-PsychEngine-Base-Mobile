@@ -26,7 +26,6 @@ class MainMenuState extends MusicBeatState
 
 	//Centered/Text options
 	var optionShit:Array<String> = [
-		'story_mode',
 		'freeplay',
 		'credits'
 	];
