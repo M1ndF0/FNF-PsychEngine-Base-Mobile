@@ -542,15 +542,15 @@ class TitleState extends MusicBeatState
 					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 					FlxG.sound.music.fadeIn(0.001, 0, 0.7);
 				case 2:
-					createCoolText(['Gun Takeover'], -40);
+					createCoolText(['M1ndF'], -40);
 				case 4:
-					addMoreText('Reimagined By', -40);
+					addMoreText('Present By', -40);
 					ngSpr.visible = true;
 				case 5:
 				ngSpr.visible = false;
 					deleteCoolText();
 				case 6:
-					createCoolText(['Gun Takeover', 'Team'], -55);
+					createCoolText(['Friendly Rhythm', 'Team'], -55);
 				case 8:
 					teamSpr.visible = true;
 				case 9:
@@ -563,11 +563,11 @@ class TitleState extends MusicBeatState
 				case 13:
 					deleteCoolText();
 				case 14:
-					addMoreText('Gun Takeover');
+					addMoreText('Friendly');
 				case 15:
-					addMoreText('Part 1');
+					addMoreText('Rhythm');
 				case 16:
-					addMoreText('Recreated'); // credTextShit.text += '\nFunkin';
+					addMoreText('Demo'); // credTextShit.text += '\nFunkin';
 
 				case 17:
 					skipIntro();
