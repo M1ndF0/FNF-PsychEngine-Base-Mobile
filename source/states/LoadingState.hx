@@ -87,9 +87,8 @@ class LoadingState extends MusicBeatState
 		}
 
 		#if PSYCH_WATERMARKS // PSYCH LOADING SCREEN
-		var bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		var bg = new FlxSprite().loadGraphic(Paths.image('loading'));
 		bg.setGraphicSize(Std.int(FlxG.width));
-		bg.color = 0xFFD16FFF;
 		bg.updateHitbox();
 		add(bg);
 	
@@ -97,6 +96,15 @@ class LoadingState extends MusicBeatState
 		loadingText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, LEFT, OUTLINE_FAST, FlxColor.BLACK);
 		loadingText.borderSize = 2;
 		add(loadingText);
+		
+		logo = new FlxSprite(0, 0).loadGraphic(Paths.image('loading_screen/icon'));
+		logo.scale.set(0.75, 0.75);
+		logo.updateHitbox();
+		logo.antialiasing = ClientPrefs.data.antialiasing;
+		logo.screenCenter();
+		logo.x -= 50;
+		logo.y -= 40;
+		add(logo);
 	
 
 		#else // BASE GAME LOADING SCREEN
