@@ -93,7 +93,7 @@ class LoadingState extends MusicBeatState
 		bg.updateHitbox();
 		add(bg);
 	
-		loadingText = new FlxText(520, 600, 400, Language.getPhrase('now_loading', 'Now Loading', ['...']), 32);
+		loadingText = new FlxText(520, 600, 400, Language.getPhrase('now_loading', ' ', [' ']), 32);
 		loadingText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, LEFT, OUTLINE_FAST, FlxColor.BLACK);
 		loadingText.borderSize = 2;
 		add(loadingText);
@@ -127,7 +127,7 @@ class LoadingState extends MusicBeatState
 		bg.screenCenter(X);
 		add(bg);
 
-		bar = new FlxSprite(bg.x + 5, bg.y + 5).makeGraphic(1, 1, FlxColor.WHITE);
+		bar = new FlxSprite(bg.x + 5, bg.y + 5).makeGraphic(1, 1, FlxColor.BLUE);
 		bar.scale.set(0, 15);
 		bar.updateHitbox();
 		add(bar);
@@ -170,11 +170,11 @@ class LoadingState extends MusicBeatState
 		switch(Math.floor(timePassed % 1 * 3))
 		{
 			case 0:
-				dots = '.';
+				dots = ' ';
 			case 1:
-				dots = '..';
+				dots = ' ';
 			case 2:
-				dots = '...';
+				dots = ' ';
 		}
 		loadingText.text = Language.getPhrase('now_loading', 'Now Loading{1}', [dots]);
 
