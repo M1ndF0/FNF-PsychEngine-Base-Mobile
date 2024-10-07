@@ -393,12 +393,12 @@ class TitleState extends MusicBeatState
 			
 			if(pressedEnter)
 			{
-				titleText.color = FlxColor.WHITE;
+				titleText.color = FlxColor.BLUE;
 				titleText.alpha = 1;
 				
 				if(titleText != null) titleText.animation.play('press');
 
-				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
+				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x40077FF, 1);
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 
 				transitioning = true;
@@ -602,7 +602,7 @@ class TitleState extends MusicBeatState
 						remove(ngSpr);
 						remove(teamSpr);
 						remove(credGroup);
-						FlxG.camera.flash(FlxColor.WHITE, 2);
+						FlxG.camera.flash(FlxColor.BLUE, 2);
 						skippedIntro = true;
 						playJingle = false;
 
@@ -619,7 +619,7 @@ class TitleState extends MusicBeatState
 						remove(ngSpr);
 								remove(teamSpr);
 						remove(credGroup);
-						FlxG.camera.flash(FlxColor.WHITE, 0.6);
+						FlxG.camera.flash(FlxColor.BLUE, 0.6);
 						transitioning = false;
 					});
 				}
@@ -628,7 +628,7 @@ class TitleState extends MusicBeatState
 					remove(ngSpr);
 							remove(teamSpr);
 					remove(credGroup);
-					FlxG.camera.flash(FlxColor.WHITE, 3);
+					FlxG.camera.flash(FlxColor.BLUE, 3);
 					sound.onComplete = function() {
 						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 						FlxG.sound.music.fadeIn(4, 0, 0.7);
@@ -642,7 +642,7 @@ class TitleState extends MusicBeatState
 				remove(ngSpr);
 						remove(teamSpr);
 				remove(credGroup);
-				FlxG.camera.flash(FlxColor.WHITE, 4);
+				FlxG.camera.flash(FlxColor.BLUE, 4);
 
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 				if (easteregg == null) easteregg = '';
