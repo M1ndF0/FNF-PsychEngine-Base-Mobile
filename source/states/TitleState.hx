@@ -564,10 +564,13 @@ FlxTween.tween(FlxG.camera, {zoom: 1.05}, 1, {ease: FlxEase.expoOut, type: FlxTw
 					deleteCoolText();
 				case 14:
 					addMoreText('Friendly');
+					FlxTween.tween(FlxG.camera, {zoom: 1.25}, 0.7, {ease: FlxEase.expoOut, type: FlxTween.BACKWARD});
 				case 15:
 					addMoreText('Rhythm');
+					FlxTween.tween(FlxG.camera, {zoom: 1.25}, 0.7, {ease: FlxEase.expoOut, type: FlxTween.BACKWARD});
 				case 16:
 					addMoreText('Demo'); // credTextShit.text += '\nFunkin';
+					FlxTween.tween(FlxG.camera, {zoom: 1.25}, 0.7, {ease: FlxEase.expoOut, type: FlxTween.BACKWARD});
 
 				case 17:
 					skipIntro();
@@ -602,7 +605,7 @@ FlxTween.tween(FlxG.camera, {zoom: 1.05}, 1, {ease: FlxEase.expoOut, type: FlxTw
 						remove(ngSpr);
 						remove(teamSpr);
 						remove(credGroup);
-						FlxG.camera.flash(FlxColor.BLUE, 2);
+						FlxG.camera.flash(FlxColor.BLUE, 1);
 						skippedIntro = true;
 						playJingle = false;
 
@@ -628,7 +631,7 @@ FlxTween.tween(FlxG.camera, {zoom: 1.05}, 1, {ease: FlxEase.expoOut, type: FlxTw
 					remove(ngSpr);
 							remove(teamSpr);
 					remove(credGroup);
-					FlxG.camera.flash(FlxColor.BLUE, 3);
+					FlxG.camera.flash(FlxColor.BLUE, 1);
 					sound.onComplete = function() {
 						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 						FlxG.sound.music.fadeIn(4, 0, 0.7);
@@ -642,7 +645,7 @@ FlxTween.tween(FlxG.camera, {zoom: 1.05}, 1, {ease: FlxEase.expoOut, type: FlxTw
 				remove(ngSpr);
 						remove(teamSpr);
 				remove(credGroup);
-				FlxG.camera.flash(FlxColor.BLUE, 4);
+				FlxG.camera.flash(FlxColor.BLUE, 1);
 
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 				if (easteregg == null) easteregg = '';
