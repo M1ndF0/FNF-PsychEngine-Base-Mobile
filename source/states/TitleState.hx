@@ -521,7 +521,7 @@ class TitleState extends MusicBeatState
 	{
 		super.beatHit();
 		
-
+FlxTween.tween(FlxG.camera, {zoom: 1.05}, 1, {ease: FlxEase.expoOut, type: FlxTween.BACKWARD});
 		if(logoBl != null)
 			logoBl.animation.play('bump', true);
 
@@ -544,7 +544,7 @@ class TitleState extends MusicBeatState
 				case 2:
 					createCoolText(['M1ndF'], -40);
 				case 4:
-					addMoreText('Present By', -40);
+					addMoreText('Present', -40);
 					ngSpr.visible = true;
 				case 5:
 				ngSpr.visible = false;
