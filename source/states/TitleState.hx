@@ -400,6 +400,9 @@ class TitleState extends MusicBeatState
 
 				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x40077FF, 1);
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+				FlxTween.tween(FlxG.camera, {zoom: 0.85}, 1, {ease: FlxEase.expoOut, type: FlxTween.BACKWARD});
+				FlxTween.tween(logoBl, {y: logoBl.y - 800}, 2, {ease: FlxBack.expoOut});
+				FlxTween.tween(gfDance, {y: gfDance.y + 1000}, 2, {ease: FlxBack.expoOut});
 
 				transitioning = true;
 				// FlxG.sound.music.stop();
@@ -564,13 +567,10 @@ FlxTween.tween(FlxG.camera, {zoom: 1.05}, 1, {ease: FlxEase.expoOut, type: FlxTw
 					deleteCoolText();
 				case 14:
 					addMoreText('Friendly');
-					FlxTween.tween(FlxG.camera, {zoom: 1.25}, 0.7, {ease: FlxEase.expoOut, type: FlxTween.BACKWARD});
 				case 15:
 					addMoreText('Rhythm');
-					FlxTween.tween(FlxG.camera, {zoom: 1.25}, 0.7, {ease: FlxEase.expoOut, type: FlxTween.BACKWARD});
 				case 16:
 					addMoreText('Demo'); // credTextShit.text += '\nFunkin';
-					FlxTween.tween(FlxG.camera, {zoom: 1.25}, 0.7, {ease: FlxEase.expoOut, type: FlxTween.BACKWARD});
 
 				case 17:
 					skipIntro();
