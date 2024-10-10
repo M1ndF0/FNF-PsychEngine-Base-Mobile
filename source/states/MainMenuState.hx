@@ -289,7 +289,7 @@ class MainMenuState extends MusicBeatState
 						switch (option)
 						{
 							case 'story_mode':
-								PlayState.SONG = Song.loadFromJson("crashed-hard", "crashed");
+								PlayState.SONG = Song.loadFromJson("outside-hard", "outside");
 								LoadingState.prepareToSong();
 LoadingState.loadAndSwitchState(new PlayState());
 							case 'freeplay':
