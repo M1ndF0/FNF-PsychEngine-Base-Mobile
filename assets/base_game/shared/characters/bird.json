@@ -1,0 +1,55 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [88, 166],
+			"anim": "idle",
+			"fps": 15,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [90, 168],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [90, 162],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [90, 167],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [90, 167],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Right",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Bird",
+	"position": [-660, -390],
+	"healthicon": "bird",
+	"flip_x": false,
+	"healthbar_colors": [0, 114, 255],
+	"camera_position": [530, 200],
+	"sing_duration": 4,
+	"scale": 0.55,
+	"_editor_isPlayer": false
+}
